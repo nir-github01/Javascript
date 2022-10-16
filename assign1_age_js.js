@@ -14,10 +14,11 @@ function getDob()
     const curr_day=date.getDate();
     const curr_month=date.getMonth() + 1;
     const curr_year =date.getFullYear();
-     const userAge=curr_year - dob_year;
-alert(userAge)
+    const userAge=curr_year - dob_year;
+    alert(userAge)
+ 
     //  if(dob_month < curr_month || dob_month == curr_month && dob_day < curr_day){
-    //     alert( userAge --);
+    //     alert( userAge --); 
     //  }else{
     //     alert(userAge ++);
     //  }
