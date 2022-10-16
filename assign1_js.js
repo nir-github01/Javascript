@@ -1,19 +1,26 @@
 
 function getDob()
 {
-  
+    //Get Age 
     const age_val =document.getElementById('age').value;
-  
+    //Get User Date of Birth, (Day, Month, && Year)
     const dob_Val=document.getElementById('dob').value;
     const dob_date =new Date(dob_Val);
     const dob_day=dob_date.getDate();
     const dob_month =dob_date.getMonth();
     const dob_year =dob_date.getFullYear();
+    //Get Current Date, (Day, Month, && Year)
     const date=new Date;
     const curr_day=date.getDate();
     const curr_month=date.getMonth() + 1;
     const curr_year =date.getFullYear();
- 
+     const userAge=curr_year - dob_year;
+alert(userAge)
+    //  if(dob_month < curr_month || dob_month == curr_month && dob_day < curr_day){
+    //     alert( userAge --);
+    //  }else{
+    //     alert(userAge ++);
+    //  }
     // const month_diff= Date.now() - dob_Val.getTime();
     // alert(month_diff);
    // alert(year )
