@@ -287,3 +287,195 @@
 // if(arr1.join('') == arr2.join('')){
 //     console.log("Yes");
 // }
+
+
+// Question 5
+// Take a integer as input and return the number of zeroes in the input.
+// Constraints:
+// 0 < N <= 1000000
+
+// let a= 1230034003005;
+
+// let arr=a.toString();
+// let count =0;
+// //using loop
+// for(let i=0; i<=arr.length; i++){
+//     if(arr[i] == 0){
+//         count += 1
+// ;
+//     }
+// }
+// console.log(count);
+
+//Using for loop
+// let counts=0;
+// for(let val of arr){
+//     if(val == 0){
+//         counts += 1
+//     }
+// }
+//for in Loop
+// for(let val in arr){
+//     if(arr[val] == 0){
+//         counts += 1
+//     }
+// }
+// console.log(counts);
+
+//Using fuction or While Loop counting zeros
+// const checkZero =(num)=>{
+// let count =0;
+// let digit ;
+// console.log('counting digit ' +digit);
+// while(num){
+//      digit = num % 10;
+// if(digit == 0){
+//     // checkZero(num);
+//     count +=1;
+// }
+// num = Math.floor( num /10);
+// }
+// console.log('zero count '+ count);
+// }
+// checkZero(20063400567300232);
+
+// const primeNumber = (num)=>{
+//     let count =0;
+//     let arr=[];
+//     let newnumber= num -1;
+//     if(newnumber >0){
+//         primeNumber(newnumber);             
+//     }
+//     console.log(newnumber, num);
+// }
+//  primeNumber(10);
+
+// function primeNum(minnum, maxnum)
+// {
+//     var store  = [], i, j, primes = [];
+//     for (i = 2; i <= Math.min(minnum, maxnum); ++i) 
+//     {
+//         if (!store [i]) 
+//           {
+//             primes.push(i);
+//             for (j = i << 1; j <= Math.min(minnum, maxnum); j += i) 
+//             {
+//                 store[j] = true;
+//             }
+//         }
+//     }
+//     console.log(primes);
+//     // return primes;
+// }
+// primeNum(100, 200)
+
+
+// Question 7
+// Take an integer and print 'YES' if the input integer is an armstrong number, otherwise print 'NO'.
+
+// var n =153;
+// let key =153;
+// let digit;
+// let sum=0;
+// while(n){
+//     digit = n % 10;
+//     sum += digit * digit * digit;
+//     n=Math.floor(n/10);
+// }
+
+// if(key == sum){
+//     console.log(`number is an armastrong number${n}`);
+// }else{
+//     console.log('Not armstrong number');
+// }
+//console.log(sum);
+
+//Using for loop
+// let num = 153;
+// let sum=0;
+// let arr=num.toString().split('');
+// for(let val of arr){
+//   sum += val * val * val;
+// }
+// console.log(sum);
+
+// const NumberTake = (num)=>{
+//     let newNum=num -1;
+//     let arr=[];
+//     let arr1 =[];
+//     let arr2 = [];
+//     if(newNum >0){
+//         NumberTake(newNum);
+//     }
+//     if(num % 3==0){
+//         arr.push(num);
+//     }else if(num % 5 == 0){
+//         arr1.push(num);
+//     }else if(num % 15 == 0){
+//         arr2.push(num);
+//     }
+//     console.log(`World ${arr}`);
+//     console.log(`Hello ${arr1}`);
+//     console.log(`HelloWorld ${arr2}`);
+// }
+// NumberTake(100)
+
+// let num = 199;
+// let arr=num.toString().split('');
+// let sum1 =0;
+// let sum2= 0;
+// for(let val of arr){
+//     sum1 += parseInt(val);
+// }
+// console.log(sum1);
+
+
+let a=199,sum=0,temp=0,z=a
+  
+while(a>0 )
+{
+  let last=a%10 //9
+  a=parseInt(a/10)
+  let first=a % 10
+  // console.log(first)
+  sum=first+last
+  a=parseInt(a/10)
+  if(sum>=10)
+  {
+    last=sum%10
+    sum=parseInt(sum/10)
+    first=sum%10
+    sum=first+last
+    
+      if(sum<=9){
+          sum=sum+a
+              if(sum>=10)
+              {
+                let b=sum
+                last=b%10
+                b=parseInt(b/10)
+                first=b%10
+                sum=first+last
+                break
+    }
+  }
+  }
+  else if(sum>=2){
+    sum=sum+a
+    if(sum>=10)
+    {
+      let b=sum
+      last=b%10
+      b=parseInt(b/10)
+      first=b%10
+      sum=first+last
+    }
+  }
+}
+if(sum==1)
+{
+  console.log(z,sum,"mars number")
+}
+else{
+  console.log(z,sum,"not a mars number")
+}
