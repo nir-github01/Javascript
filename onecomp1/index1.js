@@ -430,52 +430,265 @@
 // console.log(sum1);
 
 
-let a=199,sum=0,temp=0,z=a
+// let a=1999,sum=0,temp=0,z=a
   
-while(a>0 )
-{
-  let last=a%10 //9
-  a=parseInt(a/10)
-  let first=a % 10
-  // console.log(first)
-  sum=first+last
-  a=parseInt(a/10)
-  if(sum>=10)
-  {
-    last=sum%10
-    sum=parseInt(sum/10)
-    first=sum%10
-    sum=first+last
+// while(a>0 )
+// {
+//   let last=a%10 //9
+//   a=parseInt(a/10)
+//   let first=a % 10
+//   // console.log(first)
+//   sum=first+last
+//   a=parseInt(a/10)
+//   if(sum>=10)
+//   {
+//     last=sum%10
+//     sum=parseInt(sum/10)
+//     first=sum%10
+//     sum=first+last
     
-      if(sum<=9){
-          sum=sum+a
-              if(sum>=10)
-              {
-                let b=sum
-                last=b%10
-                b=parseInt(b/10)
-                first=b%10
-                sum=first+last
-                break
+//       if(sum<=9){
+//           sum=sum+a
+//               if(sum>=10)
+//               {
+//                 let b=sum
+//                 last=b%10
+//                 b=parseInt(b/10)
+//                 first=b%10
+//                 sum=first+last
+//                 break
+//     }
+//   }
+//   }
+//   else if(sum>=2){
+//     sum=sum+a
+//     if(sum>=10)
+//     {
+//       let b=sum
+//       last=b%10
+//       b=parseInt(b/10)
+//       first=b%10
+//       sum=first+last
+//     }
+//   }
+// }
+// if(sum==1)
+// {
+//   console.log(z,sum,"mars number")
+// }
+// else{
+//   console.log(z,sum,"not a mars number")
+// }
+
+
+//Mars Number 
+
+// let num = 5999; let sum=0; let digit; let sum1=0;  let num1 = num;
+
+// while(num){
+//   let first_digit= num % 10;
+//    num =parseInt(num / 10);
+//    let last_digit= num % 10;
+//    sum = first_digit + last_digit;
+//   num =Math.floor(num/10);
+//   if(sum >= 10){
+
+//     first_digit = sum % 10;
+//     sum = parseInt(sum / 10);
+//     last_digit = sum % 10;
+//     sum = first_digit + last_digit;
+//   }
+//         if(sum<=9){
+//           sum=sum+num
+//               if(sum>=10)
+//               {
+//                 let b=sum
+//                 last_digit=b%10
+//                 b=parseInt(b/10)
+//                 first_digit=b%10
+//                 sum=first_digit+last_digit;
+//                 break
+//     }
+//   } else if(sum>=2){
+//      sum=sum+a
+//      if(sum>=10)
+//      {
+//        let b=sum
+//        last_digit=b%10
+//        b=parseInt(b/10)
+//        first_digit=b%10
+//        sum=first_digit+last_digit
+//      }
+//    }
+// }
+
+
+// if(sum==1)
+// {
+//   console.log(num1,sum,"mars number")
+// }
+// else{
+//   console.log(num1,sum,"not a mars number")
+// }
+
+// Questions 
+// Print the pattern given below, using loops.
+
+//method 1;
+
+// for(let i =0; i<= 5; i++){
+//   console.log('******');
+// }
+
+
+// Question 2
+// Print the pattern given below, using loops.
+// Input:
+// No input is required.
+// Output:
+// *
+// **
+// ***
+// ****
+// ***** 
+
+// let row ='*';
+// let n=5;
+// for(let i=0; i<=n; i++){
+//     row= '';
+//     for(let j=0; j<=i; j++){
+//         row='*' + row;
+//         // console.log(row);
+//     }
+//     console.log(row);
+// }
+
+
+// Question 3
+// Print the pattern given below, using loops.
+// Input:
+// No input is required.
+// Output:
+// 1
+// 12
+// 123
+// 1234
+// 12345
+
+// let row='';
+// let n =5;
+// for(let i=0; i<=n; i++){
+//     row='';
+//     for(let j=1; j<=i; j++){
+//         row =row + j;
+//     }
+//     console.log(row);
+// }
+
+
+// Question 4
+// Print the pattern given below, using loops.
+// Input:
+// No input is required.
+// Output:
+// 1
+// 22
+// 333
+// 4444
+// 55555
+
+// let row ='';let n=9;
+// for(let i=1; i<=n; i++){
+//     row='';
+//     for(let j=1; j<=i; j++){
+//             row=row + i;
+//     }
+//     console.log(row);
+// }
+
+// Question 5
+// Print the pattern given below, using loops.
+// Input:
+// No input is required.
+// Output:
+// 1
+// 2 3
+// 4 5 6
+// 7 8 9 10
+// 11 12 13 14 15
+
+// let n=5;
+// let count=0;
+// let row='';
+// for(let i=1; i<=5; i++){
+//     row='';
+//     for(let j=1; j<=i; j++){
+//         count = count + 1;
+//             row =  row + count + ' ';
+//     }
+//     console.log(row);
+// }
+
+// Question 6
+// Print the pattern given below, using loops.
+// Input:
+// No input is required.
+// Output:
+// 1
+// 01
+// 101
+// 0101
+// 10101
+// 010101
+
+// let row = '';
+// let n = 5; let x=0;
+// let y =0;
+
+// for(let i=1; i<=n; i++){
+//     row='';
+//     if(i % 2 ==0){
+//         x =1;
+//         y =0;
+//     }else{
+//         x = 0;
+//         y = 1;
+//     }
+//     for(let j=1; j<=i; j++){
+//         if(j % 2 == 0)
+//         {
+//             // return x;
+//          row = row + x;
+//         }
+//         else
+//         {
+//             // return y;
+//             row = row + y;
+//         }
+        
+//     }
+//     console.log(row);
+// }
+
+
+// Question 7
+// Print the pattern given below, using loops.
+// Input:
+// No input is required.
+// Output:
+// 1
+// 23
+// 123
+// 1231
+// 23123
+
+let row = '';
+let n= 5;
+
+for(let i=1; i<=n; i++){
+    for(let j=1; j<=i; j++){
+       row ='\n'+  j;
     }
-  }
-  }
-  else if(sum>=2){
-    sum=sum+a
-    if(sum>=10)
-    {
-      let b=sum
-      last=b%10
-      b=parseInt(b/10)
-      first=b%10
-      sum=first+last
-    }
-  }
-}
-if(sum==1)
-{
-  console.log(z,sum,"mars number")
-}
-else{
-  console.log(z,sum,"not a mars number")
+
+    console.log(row);
 }
