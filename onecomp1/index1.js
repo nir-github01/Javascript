@@ -671,6 +671,38 @@
 // }
 
 
+// Question 8
+// Print the pattern given below, using loops.
+// Input:
+// No input is required.
+// Output:
+// 5
+// 5 4
+// 5 4 3
+// 5 4 3 2
+// 5 4 3 2 1
+
+//  let n = 5;
+
+//  let count =5;
+//  let messege = "";
+
+//  for(let i = 1; i<= n; i++){
+//      for(let j=1; j<=i; j++){
+       
+//         if(j==1){
+//           count = 5;
+//            messege += count; 
+//            count --;
+//         }else{
+//             messege += count ;
+//             count --;
+//         }
+//      }
+//     messege += '\n';
+//  }
+//  console.log(messege);
+
 // Question 7
 // Print the pattern given below, using loops.
 // Input:
@@ -682,13 +714,289 @@
 // 1231
 // 23123
 
-let row = '';
-let n= 5;
+// let n = 5;
+// let count = 1;
 
-for(let i=1; i<=n; i++){
-    for(let j=1; j<=i; j++){
-       row ='\n'+  j;
-    }
+// let messege = '';
+// for(let i=1; i<=n; i++){
+//     messege='';
+//     for(let j=1; j<=i; j++){
+//         // messege = '';
+//          messege = messege + j;
+//         if(i > 3){
+//             messege = messege + j;
+//             count ++;
+//         }else if(i==1){
+//            messege = messege + 1;
+//         }else{
+//             messege =messege + j;
+//             count++;
+//         }
+//     }
+//     console.log(messege);
+// }
 
-    console.log(row);
+// Question 10
+// Print the pattern given below, using loops.
+// Input:
+// No input is required.
+// Output:
+//     1
+//    12
+//   123
+//  1234
+// 12345
+
+// let n = 5; 
+// let mess= '';
+// let mess1 = ' ';
+
+// for(let i=1; i<= n; i++){
+//    mess='';
+//    for(let k=n; k>=i; k--){
+//       mess +=mess1;
+//    }
+//    for(let j =1; j<=i; j++){
+//      mess += j;
+//    }
+
+
+
+//    console.log(mess);
+// }
+
+// *
+// **
+// ***
+// ****
+// *****
+// ****
+// ***
+// **
+// *
+
+// let n=5;
+// let mess='';
+// let count=1
+// let mess1='*';
+
+// for(let i=1; i<=n; i++){
+//    mess ='';
+//    for(let j=1; j<=i; j++){
+//       mess += '*';
+//    }
+//    for(let k=n; k>=i; k--){
+//       mess += ' ';
+//    }
+//    console.log(mess);
+// }
+// for(let i=1; i<=n-1; i++){
+//    mess ='';
+//    for(let k=n-1; k>=i; k--){
+//       mess += '*';
+//    }
+//    for(let j=1; j<=i; j++){
+//       mess += ' ';
+//    }
+//    console.log(mess);
+// }
+
+// let n=5;
+// let mess=" ";
+
+// for(let i=1; i<=n; i++){
+//    mess ='';
+//    for(let j=1; j<=i; j++){
+//       mess += '*';
+//    }
+//    for(let k=n; k>=i; k--){
+//       mess += ' ';
+//    }
+//    console.log(mess);
+// }
+
+// for(let i=1; i<=n; i++){
+//    mess='';
+//    for(let j=i; j<=n; j++){
+//     mess += '*';
+//    }
+//  console.log(mess);
+// }
+
+// let n=5;
+// let mess='';
+
+// let count =1;
+
+// for(let i=n; i>=1; i--){
+//    mess='';
+//    for(let j=i; j>=1; j--){
+//       mess += j;
+//    }
+//    console.log(mess);
+// }
+
+// let m=5;
+// let mess1='';
+
+// let count1 =1;
+
+// for(let i=1; i<=m; i++){
+//    mess='';
+//    for(let j=m; j>=i; j--){
+//       mess += j;
+//    }
+//    console.log(mess);
+// }
+
+
+// let a=5;
+// let mess2='';
+
+// let count2 =5;
+
+// for(let i=1; i<=a; i++){
+//    mess='';
+//    for(let j=1; j<=i; j++){
+//       mess += count2;
+//       count2 --;
+//    }
+//    console.log(mess);
+// }
+
+//Diamond and Equilateral triangle;
+
+// let n = 5;
+// let mess='';
+// let count =1;
+// for(let i=1; i<=n; i++){
+//    // mess= "";
+//    for(let j=1; j<= n-i; j++){
+//       mess += ' ';
+//    }
+//    for (let k=1; k<=2*i-1; k++){
+//       mess += '*';
+//    }
+//   mess +='\n';
+// }
+
+// // console.log(mess);
+
+// // let n = 5;
+// // let mess='';
+// // let count =1;
+// for(let i=n; i>=1; i--){
+//    // mess= "";
+//    for(let j=n-i; j>=1; j--){
+//       mess += ' ';
+//    }
+//    for (let k=2*i-1; k>=1; k--){
+//       mess += '*';
+//    }
+//   mess +='\n';
+// }
+
+// console.log(mess);
+
+//Pattern of ven numbers
+
+// let n=5;
+// let mess="";
+
+// let count = 2;
+// for(let i=1; i<=n; i++){
+//    mess =" ";
+//    for(let j=n; j>=i; j--){
+//       mess += " ";
+//    }
+
+//    for(let k=1; k<=i; k++){
+//       mess += k * 2;
+//       count += 2;
+//    }
+//    console.log(mess);
+// }
+
+//Rectangle parameters Pattern Prints
+
+// let n =5;
+// let mess = '';
+// let count =1; 
+// for (let i=1; i<=n; i++){
+//    mess =" ";
+//    for(let j=1; j<=n; j++){
+//       if(i == 1 || j==1  || i ==n || j ==n){
+//          mess += "*";
+//       }else{
+//          mess += " ";
+//       }
+     
+//    }
+//    console.log(mess);
+// }
+
+//     *
+//    ***
+//   *****
+//  *******
+// *********
+// *********
+//  *******
+//   *****
+//    ***
+//     *
+
+// let n=5; 
+// let mess = "";
+// let count =1;
+
+// for(let i=1; i<=n; i++){
+//    for(let j=1; j<=n-i; j++){
+//        mess +=" ";
+//    }
+//    for(let k=1; k<= 2*i-1; k++){
+//       mess += '*';
+//    }
+//    mess += '\n';
+// }
+
+// for(let i=n; i>=1; i--){
+//    for(let j=n-i; j>=1; j--){
+//        mess +=" ";
+//    }
+
+//    for(let k=2*i-1; k>= 1; k--){
+//       mess += '*';
+//    }
+//    mess += '\n';
+// }
+// console.log(mess);
+
+
+//Reverse Array 
+
+// const reverseArray =(a)=>{
+
+//    console.log(a.reverse());
+// }
+
+//  reverseArray([3, 4, 5, 6]);
+
+
+const reverseArray =(arr) =>{
+   
+   let temp;
+   let lindex=0;
+   let rindex = arr.length -1;
+
+   while(lindex < rindex){
+      temp = arr[lindex];
+      arr[lindex] = arr[rindex];
+      arr[rindex] =temp;
+      
+      lindex ++;
+      rindex --;
+   }
+   console.log(arr);
 }
+reverseArray([2, 3, 4, 5, 6, 7])
