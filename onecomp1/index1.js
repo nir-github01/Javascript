@@ -972,31 +972,527 @@
 // }
 // console.log(mess);
 
-
 //Reverse Array 
-
 // const reverseArray =(a)=>{
-
 //    console.log(a.reverse());
 // }
-
 //  reverseArray([3, 4, 5, 6]);
 
+// const reverseArray =(arr) =>{ 
+//    let temp;
+//    let lindex=0;
+//    let rindex = arr.length -1;
+//    while(lindex < rindex){
+//       temp = arr[lindex];
+//       arr[lindex] = arr[rindex];
+//       arr[rindex] =temp;    
+//       lindex ++;
+//       rindex --;
+//    }
+//    console.log(arr);
+// }
+// reverseArray([2, 3, 4, 5, 6, 7])
 
-const reverseArray =(arr) =>{
-   
-   let temp;
-   let lindex=0;
-   let rindex = arr.length -1;
+/**
+ * count objects; 
+ * 
+ * where Object X == Object Y;
+ * 
+ * Two objects;
+ * 
+ */
+ 
 
-   while(lindex < rindex){
-      temp = arr[lindex];
-      arr[lindex] = arr[rindex];
-      arr[rindex] =temp;
-      
-      lindex ++;
-      rindex --;
-   }
-   console.log(arr);
+// let object1 = [1, 2, 3, 4, 5, 6, 7];
+// let object2 = [1, 3, 4, 4, 5, 7, 8];
+// let count = 0;
+// for(let i=0; i<=object1.length - 1; i++){
+//   for(let j=i; j<=object2.length -1; j++){
+//     if(object1[i] == object2[j]){
+//       count ++ ;
+//     }
+//   }
+// }
+// console.log(count);
+
+
+
+/** 
+ * PolyGon Perrimeter Calculation
+ * 
+ * 1. Take dimentions of polygon.
+ *    a. Create a class constuctors to take polygon dimentions
+ * 2. Calculate Perimeter of poilygon.
+ *     a. Take class or function to calculate perimeter
+ * 
+ */ 
+
+
+// let pDimention = new Object();
+
+// pDimention.width=parseInt(12);
+// pDimention.height =parseInt(13);
+// pDimention.length =parseInt(14);
+
+//  pDimention.perimeter = pDimention.width + pDimention.length + pDimention.height;
+//  console.log(pDimention.perimeter);
+//  console.log(pDimention);
+
+//  const objects = {
+//   width:parseInt(15), 
+//   length:parseInt(16),
+//   height:parseInt(17),
+//     perimeterss: function(){
+//       return this.width + this.length + this.height;
+//     }
+//   }
+ 
+//   console.log(objects.perimeterss());
+ 
+
+
+/**
+ *An array 
+ 1. Multiply by 2 if even numbers 
+ 2. multiply by 3 if odd numbers 
+ */
+
+//  const Arrayfunction =(arr) =>{
+//   let newArr=[];
+//   let arr2 =[];
+//   // newArr = Arrayfunction (arr-1);
+//   for(let i=0; i<= arr.length -1 ; i++){
+//    if(arr[i] % 2 == 0){
+//      arr2.push(arr[i] * 2)
+//    }else{
+//     arr2.push(arr[i] * 3)
+//    }
+//   }
+//   console.log(arr2);
+//  } 
+//  Arrayfunction([1, 2, 3, 4, 5, 6, 7]);
+
+/**
+ * Sorting Algorithm
+ * 1. looping each elements - loop
+ * 2. comparison two contiguios element 
+ */
+
+//Bubble sort  -> Time Complexity - worst case {O(n^2)} in reverse ordering 
+//Best Time complexity in increasing order arrangements - {O(n)}. 
+
+// let array = [6,8,1, 2, 5, 7, 9, 8];
+// let n = array.length;
+// let temp;
+// for(let i=0; i<=n ; i++){
+
+//   for(let j=0; j<=n-i-1; j++){
+//     if(array[j] > array[j+1]){
+//       temp = array[j];
+//       array[j] = array[j+1];
+//       array[j+ 1] = temp;
+//     }
+//     // console.log(temp);
+//   }
+
+// }
+//  console.log(array);  
+
+
+/**
+ * Vowels And Consonants
+ * 
+ */
+
+// let arrStr =  ['a', 'b', 'c', 'd', 'e', 'i', 'p', 'u', 'w'];
+
+// let vowels = ['a', 'e', 'i', 'o', 'u'];
+// let arr =[];
+// let count =0;
+// for(let i=0; i<=arrStr.length-1; i++){
+//     for(let j=0; j<=vowels.length - 1; j++){
+//         if(arrStr[i] == vowels[j]){
+//              arr +=arrStr[i] +'is Vowels' + '\n';
+//              count++;
+//              console.log(count);
+//         }
+
+//     }
+// }
+// console.log(`${arr}`, count);
+
+// let vowels = ['a','e', 'i', 'o', 'u'];
+
+// let arrStr = ['q', 'w','e', 'r', 't','y', 'u'];
+// let str = [];
+// for(let i=0; i<=arrStr.length - 1; i++){
+//     if(vowels.includes(arrStr[i])){
+//         // str=  arrStr.indexOf('a');
+//       str += arrStr[i] + ' '+ 'is vowel' + '\n' + '\n';
+//     }else{
+//         str += arrStr[i] +' ' + 'is Consonants' + '\n' + '\n';
+//     }
+// }
+// console.log(str);
+
+
+/** Selection Sorting 
+ * Time complexity -> {O(n^2)}
+ * Space Complexity => {O(1)};
+ * 
+ */
+
+// const sortedArr =(arr, p, q) => {
+//     var temp = arr[p];
+//       arr[p] = arr[q];
+//       arr[q] = temp;
+//     //   console.log(temp);
+// }
+// const SelectionSort=(arr, n) =>{     
+//     var min_idx;
+//     for(var i=0; i<=n-1; i++){
+//     //    console.log(min_idx + ' before assign');
+//         min_idx = i;
+//         // console.log(min_idx + 'after assign');
+//         for(var j= i+ 1; j<=n; j++){
+//             if(arr[j] < arr[min_idx]){
+//                 min_idx = j;
+//             }
+//         }
+//         sortedArr(arr, min_idx, i);
+//     }
+// }
+// function printArray(arr, size){
+//     for(let i=0; i< size; i++){
+//         console.log(arr[i] + ' ' );
+//     }
+// }
+// var arr = [64, 25, 12, 22, 11];
+// var n= 5;
+// SelectionSort(arr, n)
+// console.log('sorted Array');
+// printArray(arr, n);
+
+
+/** Insertion Sorting Algorithm
+ * 
+ * 1. Select two Contiguous   element of an array and compare;
+ * 2. swap if required
+ */
+
+
+// const insertionSort = (arr, n) =>{
+//     let i, key, j;
+//     for(i=1; i< n; i++){
+//         key=arr[i];
+//         j=i - 1;
+
+//         /** Move elements of arr[0....i-1], that  are greater than key, to one position ahead of their current position*/
+//         while(j>= 0 && arr[j] > key){
+//             arr[j + 1] = arr[j];
+//             j=j - 1;
+//         }
+//         arr[j + 1] = key;
+//     }
+// }
+
+
+
+// const printSortedArray=(arr, n) =>{
+
+//     let i;
+//     for(i=0; i<n; i++)
+//     {
+//         console.log(arr[i]);
+//     }
+// }
+
+// let arr = [3, 67, 98, 9, 43, 1, 89];
+// let n = arr.length;
+// insertionSort(arr, n)
+// printSortedArray(arr, n);
+
+// const mergeSort =(arr, l, m, r) => {
+//     var n1= m - l + 1;
+//     var n2 = r - m;
+
+//     //create Temp Arrays
+
+//     var L = new Array(n1);
+//     var R = new Array(n2);
+
+//     //Copy data into left and right array;
+//     for(var i = 0; i < n1; i++){
+//         L[i] = arr[l + i];
+//         for(var j=0; j < n2; j++){
+//             R[j] = arr[m + 1 + j];
+//         }
+//     }
+
+//     //Merge Temp Array Back into arr[1...r];
+
+//     //Initial index of first subarray
+
+//     var i = 0;
+//     //Initial index of second subarray
+//     var j = 0;
+    
+//     //Initial index of merged subarray
+//     var k = l;
+
+//     while(i < n1 && j < n2){
+//         if(L[i] <= R[j]){
+//             arr[k] = L[i];
+//             i++;
+//         }else{
+//             arr[k] = R[j];
+//             j++;
+//         }
+//         k++;
+//     }
+
+//     //Copy the remaining elements of 
+//     //L[], if there are any
+
+//     while(i<n1){
+//         arr[k] = L[i];
+//         i++;
+//         k++;
+//     }
+
+//     //Copy the remaining elements of 
+//     //R[], if there are any
+
+//     while(j< n2) {
+//         arr[k] = R[j];
+//         j++;
+//         k++;
+//     }
+// }
+
+// function mergeSorting(arr, l, r){
+//     if(l>=r){
+//         return;
+//     }
+//     var m =l+ parseInt((r-l)/2);
+//     mergeSorting(arr, l, m);
+//     mergeSorting(arr, m + 1, r);
+//     mergeSort(arr, l, m, r);
+// }
+
+
+// //UTILITY FUNCTION
+
+// function printSortedarray(A, size){
+//     for(var i=0; i< size; i++){
+//         console.log(A[i] + " ");
+//     }
+// }
+
+// var arr = [12, 23, 32, 11, 4, 6, 5, 10];
+// let arr_size= arr.length;
+// console.log('Given Array');
+// printSortedarray(arr, arr_size);
+
+// console.log('Sorted Array');
+
+// mergeSorting(arr, 0, arr_size - 1);
+
+// // console.log('sorted Array');
+
+// printSortedarray(arr, arr_size);
+
+// // Merge sort methods 2;
+// function mergeing (left, right) {
+//     let arr = [];
+
+//     while(left.length && right.length ){
+//         if(left[0] < right[0]){
+//             arr.push(left.shift())
+//         }else{
+//             arr.push(right.shift())
+//         }
+//     }
+
+//     return [...arr, ...left, ...right]
+// }
+
+// function mergeSort1(array){
+//     const half = array.length / 2 ;
+
+//     //Base or Terminating Case
+//     if(array.length <=1){
+
+//         return array;
+//     }
+
+//     const left = array.slice(0, half)
+//     const right =array.slice(half)
+//        return mergeing(left, right)
+//     return mergeing(mergeSort1(left), mergeSort1(array))
+// }
+
+// array=[4, 5, ,2, 6, 8, 5, 2, 1, 7];
+// console.log(mergeSort1(array));,
+
+
+//Merge Sort Method 3
+
+// function merge(left, right){
+//     let sortedArr = [];
+
+//     while(left.length && right.length){
+//         if(left[0] < right[0]){
+//             sortedArr.push(left.shift());
+//         }else{
+//             sortedArr.push(right.shift());
+//         }
+//     }
+
+//     return [...sortedArr, ...left, ...right]
+// }
+
+// function mergeSort(arr){
+//     if(arr.length <=1){
+//         return arr;
+//     }
+//     let mid =Math.floor(arr.length / 2);
+
+//     let left = mergeSort(arr.slice(0, mid))
+//     let right = mergeSort(arr.slice(mid));
+
+//     return merge(left, right)
+// }
+
+// arr=[4, 6, 2, 1, 8, 3, 9, 2]
+
+// console.log(mergeSort(arr))
+
+
+/**
+ * Quick Sorting
+ */
+
+// function quickSort(array){
+//     if(array.lenght <= 1){
+//         return array;
+//     }else{
+//         var pivot = array[0];
+//         var left = [];
+//         var right = [];
+//         for(var i=1; i < array.lenght; i++){
+//             if(array[i] < pivot){
+//                 left.push(array[i]);
+//             }else{
+//                 right.push(array[i]);
+//             }
+//         }
+//         return quickSort(left).concat(pivot, quickSort(right))
+//     }
+// }
+
+//  array = [10, 2, 4, 12, 34, 21, 76, 9, 8];
+
+// var sortedArray = quickSort(array)
+// console.log(sortedArray);
+
+
+// quick Sorting
+
+// var items = [5, 3, 7, 6, 2, 9];
+
+// function  swap(items, leftindex, rightindex){
+//     var temp = items[leftindex];
+//     items[leftindex] =items[rightindex];
+//     items[rightindex] = temp;
+// }
+
+// function partition(items, left, right){
+//     var pivot  = items[Math.floor((right + left)  / 2)];
+//     i = left;
+//     j= right;
+
+//     while(i <= j){
+//         while(items[i] < pivot){
+//             i++;
+//         }
+//         while(items[j] > pivot){
+//             j--;
+//         }
+//         if(i <= j){
+//             swap(items, i, j)
+//             i++;
+//             j--;
+//         }
+//     }
+//     return i;
+// }
+
+// function quickSort(items, left, right){
+//     var index;
+//     if(items.length > 1){
+//         index = partition(items, left, right)
+
+//         if(left < index - 1){
+//             quickSort(items, left, index - 1);
+//         }
+        
+//         if(index < right){
+//             quickSort(items, index, right)
+//         }
+//     }
+//     return items;
+// }
+
+// var sortedArray = quickSort(items, 0, items.length - 1);
+// console.log(sortedArray);
+
+
+// function partition(arr, start, end){
+//     const pivotValue = arr[end];
+//     let pivotIndex = start;
+//     for(let i=start; i<end; i++){
+//         if(arr[i] < pivotValue){
+//             [arr[i], arr[pivotIndex]] = [arr[pivotIndex], arr[i]];
+//             pivotIndex ++;
+//         }
+//     }
+//     [arr[pivotIndex], arr[end]] = [arr[end], arr[pivotIndex]]
+//     return pivotIndex;
+// }
+
+// function quickSortRecursive(arr, start, end){
+//     if(start >= end){
+//         return;
+//     }
+//     let index = partition(arr, start, end);
+
+//     quickSortRecursive(arr, start, index -1);
+//     quickSortRecursive(arr, index + 1, end);
+// }
+
+// array = [7, -2, 4, 1, 6, 5, 0, -4, 2]
+// quickSortRecursive(array, 0, array.length - 1);
+
+// console.log(array);
+
+
+function QuickSort(Arr){
+    if(Arr.length <= 1){
+        return Arr;
+    }
+
+    const pivot = Arr.length - 1;
+    const leftArr = [];
+    const rightArr = [];
+
+    for(let i =0; i< Arr.length - 1; i++){
+        Arr[i] < pivot ? leftArr.push(Arr[i]) : rightArr.push(Arr)
+    }
+
+    return [...QuickSort(leftArr), pivot, ...QuickSort(rightArr)];
 }
-reverseArray([2, 3, 4, 5, 6, 7])
+
+const items = [1, 5, 2, 99, 81, 100, 144, 121, 91, 85, 74, 10];
+
+console.log(QuickSort(items));
