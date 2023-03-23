@@ -1476,23 +1476,268 @@
 
 // console.log(array);
 
+// Quick sort methods (incomplete)
 
-function QuickSort(Arr){
-    if(Arr.length <= 1){
-        return Arr;
+// function QuickSort(Arr){
+//     if(Arr.length <= 1){
+//         return Arr;
+//     }
+
+//     const pivot = Arr.length - 1;
+    
+//     const leftArr = [];
+//     const rightArr = [];
+
+//     for(let i =0; i< Arr.length - 1; i++){
+//         Arr[i] < pivot ? leftArr.push(Arr[i]) : rightArr.push(Arr)
+//     }
+
+//     return [...QuickSort(leftArr), pivot, ...QuickSort(rightArr)];
+// }
+
+// const items = [1, 5, 2, 99, 81, 100, 144, 121, 91, 85, 74, 10];
+
+// console.log(QuickSort(items));
+
+/**  HeapSorting */
+
+// function sort(arr){
+//     var N = arr.length;
+//     for(var i = Math.floor(N/2) - 1; i>=0; i--){
+//         heapify(arr, N, i);
+//     }
+
+//     for(var i=N - 1; i > 0; i--){
+//         var temp = arr[0];
+//         arr[0] = arr[i];
+//         arr[i] =temp;
+
+//         heapify(arr, i, 0);
+//     }
+// }
+
+// function heapify(arr, N, i){
+//     var largest = i;
+//     var l = 2 * i + 1;
+//     var r = 2 * i + 2;
+
+//     if(l <N && arr[l] > arr[largest]){
+//         largest = l;
+//     }
+
+//     if(r < N && arr[r] > arr[largest]){
+//         largest = r;
+//     }
+
+//     if(largest !=i){
+//         var swap = arr[i];
+//         arr[i] = arr[largest];
+//         arr[largest] =swap;
+
+//         heapify(arr, N, largest);
+//     }
+// }
+
+// function printArr(arr){
+//     var N=arr.length;
+//     for(var i=0; i < N; ++i){
+//         console.log(arr[i] + " ");
+//     }
+// }
+
+// var arr= [12, 11, 13, 5, 6, 7]
+
+// var N = arr.length;
+
+// sort(arr);
+// console.log("sorted Array is");
+// printArr(arr, N);
+
+
+
+/**Heap Sort */
+
+// class MaxHeap{
+//     constructor () {
+//         this.heap = [];
+//     }
+
+//     parentIndex(index){
+//         return Math.floor((index-1)/2);
+//     }
+
+//     leftChildIndex(index) {
+//         return (2*index + 1)
+//     }
+
+//     rightChildIndex(index){
+//         return (2*index + 2)
+//     }
+
+//     swap(a, b){
+//         let temp = this.heap[a];
+//         this.heap[a] = this.heap[b];
+//         this.heap[b] = temp;
+//     }
+
+//     insert(item){
+//         this.heap.push(item);
+//         var index =this.heap.length - 1;
+//         var parent = this.parentIndex(index);
+//         while(this.heap[parent] && this.heap[parent] < this.heap[index]){
+//             this.swap(parent, index);
+//             index = this.parentIndex(index);
+//             parent = this.parentIndex(index)
+//         }
+        
+//     }
+
+//     delete() {
+//         var item = this.heap.shift();
+//         this.heap.unshift(this.heap.pop());
+//         var index =0;
+//         var leftChild =this.leftChildIndex(index);
+//         var rightChild = this.rightChildIndex(index);
+//         while(this.heap[leftChild] && this.heap[leftChild ] > this.heap[index] || this.heap[rightChild] > this.heap[index]){
+//               var max =leftChild;
+//               if(this.heap[rightChild] && this.heap[rightChild] > this.heap[max]){
+//                   max = rightChild
+//               }
+//               this.swap(max, index);
+//               index = max;
+//               leftChild = this.leftChildIndex(max);
+//               rightChild = this.rightChildIndex(max);
+
+//         }
+//         return item;
+//     }
+// }
+
+// function heapSort (arr){
+//     var sorted = [];
+//     var heap1 = new MaxHeap();
+//     for(let i=0; i<arr.legth; i++){
+//         heap1.insert(arr[i]);
+//     }
+//     for(let i=0; i<arr.length; i++){
+//         sorted.push(heap1.delete());
+//     }
+//     return sorted;
+// }
+
+
+// let arr = [1,3, 2, 5, 6, 4, 8, 7, 9]
+
+// // arr = heapSort(arr);
+
+// console.log(heapSort(arr));f
+
+// const maxHeapify = (arr, n, i) => {
+//     let largest = i;
+//     let l = 2 * i + 1; //left child index
+//     let r = 2 * i + 2; //right child index
+
+//     //If left child is smaller  than root
+
+//     if(l < n && arr[l] > arr[largest]) {
+//         largest = l;
+//     }
+
+//     //If right child is smaller than smallest so far 
+
+//     if( r < n && arr[r] > arr[largest]){
+//         largest = r;
+//     }
+
+//     //If smallest is not root 
+
+//     if(largest !=i){
+//         let temp = arr[i];
+//         arr[i] = arr[largest];
+//         arr[largest] = temp;
+
+//         //Recursively heapify the affected sub tree
+
+//         maxHeapify(arr, n, largest);
+//     }
+// }
+// //main function to do heap sort
+
+// const heapSort = (arr, n) => {
+//     //Build heap (rearrange array)
+//    for(let i = parseInt(n / 2 - 1); i >= 0; i --){
+//     maxHeapify(arr, n, i);
+//    }
+
+//    //One by one extract an element from heap
+//    for(let i = n -1; i >= 0; i--){
+//     //Move current root to end
+//     let temp = arr[0];
+//     arr[0] =arr[i];
+//     arr[i] = temp;
+
+//     //call max heapify on the reduced heap
+
+//     maxHeapify(arr, i , 0);
+//    }
+// }
+
+// const arr = [4, 5, 7, 2, 3, 8];
+// heapSort(arr, arr.length);
+// console.log(arr);
+
+
+const minHeapify = (arr, n, i) => {
+    let smallest = i;
+    let l = 2 * i + 1; //left child index
+    let r = 2 * i + 2;  //right child index
+
+    //If left child is smaller than root
+
+    if(l < n && arr[l] < arr[smallest]){
+        smallest = l;
     }
 
-    const pivot = Arr.length - 1;
-    const leftArr = [];
-    const rightArr = [];
+    //If right child smaller than smallest so for
 
-    for(let i =0; i< Arr.length - 1; i++){
-        Arr[i] < pivot ? leftArr.push(Arr[i]) : rightArr.push(Arr)
+    if(r < n && arr[r] < arr[smallest]){
+        smallest = r;
     }
 
-    return [...QuickSort(leftArr), pivot, ...QuickSort(rightArr)];
+    //If smallest is not root
+
+    if(smallest != i){
+        let temp = arr[i];
+        arr[i] = arr[smallest];
+        arr[smallest] = temp;
+
+        //Recursively heapify the affected sub-tree
+
+        minHeapify(arr, n, smallest);
+    }
 }
 
-const items = [1, 5, 2, 99, 81, 100, 144, 121, 91, 85, 74, 10];
+//main function to do heap sort
 
-console.log(QuickSort(items));
+const heapSort = (arr, n) => {
+    //Build heap (rearrange array)
+    for(let i= parseInt(n/2 - 1); i >=0; i--){
+        minHeapify(arr, n, i);
+    }
+
+    //One by one extract an element from heap
+
+    for(let i =n-1; i>=0; i--){
+        //Move current root to end
+        let temp = arr[0];
+        arr[0] = arr[i];
+        arr[i] = temp;
+
+        //call max heapify on the reduced heap
+        minHeapify(arr, i, 0);
+    }
+}
+
+const arr = [4, 6, 4, 3, 1, 8, 7, 5];
+heapSort(arr, arr.length);
+console.log(arr);
