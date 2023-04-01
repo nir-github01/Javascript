@@ -1687,57 +1687,252 @@
 // console.log(arr);
 
 
-const minHeapify = (arr, n, i) => {
-    let smallest = i;
-    let l = 2 * i + 1; //left child index
-    let r = 2 * i + 2;  //right child index
+// const minHeapify = (arr, n, i) => {
+//     let smallest = i;
+//     let l = 2 * i + 1; //left child index
+//     let r = 2 * i + 2;  //right child index
 
-    //If left child is smaller than root
+//     //If left child is smaller than root
 
-    if(l < n && arr[l] < arr[smallest]){
-        smallest = l;
-    }
+//     if(l < n && arr[l] < arr[smallest]){
+//         smallest = l;
+//     }
 
-    //If right child smaller than smallest so for
+//     //If right child smaller than smallest so for
 
-    if(r < n && arr[r] < arr[smallest]){
-        smallest = r;
-    }
+//     if(r < n && arr[r] < arr[smallest]){
+//         smallest = r;
+//     }
 
-    //If smallest is not root
+//     //If smallest is not root
 
-    if(smallest != i){
-        let temp = arr[i];
-        arr[i] = arr[smallest];
-        arr[smallest] = temp;
+//     if(smallest != i){
+//         let temp = arr[i];
+//         arr[i] = arr[smallest];
+//         arr[smallest] = temp;
 
-        //Recursively heapify the affected sub-tree
+//         //Recursively heapify the affected sub-tree
 
-        minHeapify(arr, n, smallest);
-    }
-}
+//         minHeapify(arr, n, smallest);
+//     }
+// }
 
-//main function to do heap sort
+// //main function to do heap sort
 
-const heapSort = (arr, n) => {
-    //Build heap (rearrange array)
-    for(let i= parseInt(n/2 - 1); i >=0; i--){
-        minHeapify(arr, n, i);
-    }
+// const heapSort = (arr, n) => {
+//     //Build heap (rearrange array)
+//     for(let i= parseInt(n/2 - 1); i >=0; i--){
+//         minHeapify(arr, n, i);
+//     }
 
-    //One by one extract an element from heap
+//     //One by one extract an element from heap
 
-    for(let i =n-1; i>=0; i--){
-        //Move current root to end
-        let temp = arr[0];
-        arr[0] = arr[i];
-        arr[i] = temp;
+//     for(let i =n-1; i>=0; i--){
+//         //Move current root to end
+//         let temp = arr[0];
+//         arr[0] = arr[i];
+//         arr[i] = temp;
 
-        //call max heapify on the reduced heap
-        minHeapify(arr, i, 0);
-    }
-}
+//         //call max heapify on the reduced heap
+//         minHeapify(arr, i, 0);class
+//     }
+// }
 
-const arr = [4, 6, 4, 3, 1, 8, 7, 5];
-heapSort(arr, arr.length);
-console.log(arr);
+// const arr = [4, 6, 4, 3, 1, 8, 7, 5];
+// heapSort(arr, arr.length);
+// console.log(arr);
+
+
+
+//Radix sort algorithm
+
+//A utility function to get maximum value in arr [];
+
+// function getMax(arr, n){
+//     let mx = arr[0];
+//     for(let i=1; i < n; i++){
+//         if(arr[i] > mx){
+//             mx = arr[i]
+//         }
+//         //return mx;
+//     }
+//     return mx;
+// }
+
+// //A function to do counting sort of arr[] according to 
+// //the digit represented by exp.
+
+// function countSort(arr, n, exp){
+//     let output = new Array(n);
+//        let i; 
+//        let count = new Array(10);
+//        for(let i=0; i < 10; i++){
+//         count[i] = 0;
+
+//        }
+
+//        //Store count of occurences in count[]
+
+//        for(i=0; i<n; i++){
+//         let flr = Math.floor(arr[i]/exp);
+//         count[flr % 10] ++;
+//        }
+
+//        //Change count[i] so that count[i] now contains 
+//        //actual position of this digit in output[]
+
+//        for(i=1; i < 10; i++){
+//         count[i] += count[i - 1];
+//        }
+
+//        //Build the output array
+
+//        for(i = n -1; i >=0; i --){
+//         let flr =Math.floor(arr[i]/exp);
+//         output[count[flr % 10] - 1] = arr[i];
+//         count[flr % 10] --;
+//        }
+
+//        //copy the output array to arr[], so that arr[] now
+//        //contains sorted numbers according to current digit
+
+//        for(i=0; i< n; i++){
+//         arr[i] = output[i];
+//        }
+// }
+
+// //The main function to that sorts arr[] of size n using 
+
+// //Radix sort 
+
+// function radixsort(arr, n){
+//     //Find the maximum number to know number of digits
+
+//     let m = getMax(arr, n);
+
+//     //Do counting sort for every digit, Note That
+//     // Instead of passing digit number, exp is passed.
+//     //exp is 10^i where i is cirrent digit number
+
+//     for(let exp =1; Math.floor(m/exp) > 0; exp *=10){
+//         countSort(arr, n, exp);
+//     }
+
+// }
+
+// //A utility function to print an array 
+
+// function print(arr, n){
+//     for(let i=0; i< n; i++){
+//         console.log(arr[i] + " ");
+//     }
+// }
+
+// let arr = [170, 45, 75, 90, 802, 24, 2, 66];
+
+// let n = arr.length;
+
+// radixsort(arr, n);
+// print(arr, n);
+
+// function getDigit(num, place) {
+//     return Math.floor(Math.abs(num) / Math.pow(10, place)) % 10;
+// }
+
+// console.log(getDigit(43263, 0));
+
+// function digitCount(num) {
+//     if(num === 0){
+//         return 1;
+//     }
+
+//     return Math.floor(Math.log10(Math.abs(num))) + 1
+// }
+
+// console.log(digitCount(0));
+
+// console.log(digitCount(21));
+
+// function mostDigits(nums) {
+//     let maxDigits = 0;
+
+//     for(let i=0; i< nums.length; i++){
+//         maxDigits = Math.max(maxDigits, digitCount(nums[i]))
+//     }
+//     return maxDigits;
+// }
+
+// console.log(mostDigits([44, 849, 1, 3333]));
+
+// function radixSort(arrOfNums){
+//     let maxDigitCount = mostDigits(arrOfNums)
+
+//     for(let k=0; k < maxDigitCount; k++){
+//         let digitBuckets =Array.from({length:10}, () => [])
+
+//         for(let i =0; i<arrOfNums.length; i++){
+//             let digit = getDigit(arrOfNums[i], k)
+
+//             digitBuckets[digit].push(arrOfNums[i])
+//         }
+
+//         //New order after each loop
+
+//         arrOfNums = [].concat(...digitBuckets)
+//     }
+
+//     return arrOfNums;
+// }
+
+// console.log(radixSort([1, 33, 444, 0, 3, 2]));
+
+// const unsortedArr = [31, 27, 28, 42, 13, 11, 30, 17, 41, 15, 43, 1, 36, 9, 16, 20, 35, 48]
+
+// const getNum = (num, index) => {
+//     const strNum = String(num);
+//     let end = strNum.length - 1;
+//     const foundNum = strNum[end - index];
+
+//     if(foundNum === undefined) {
+//         return 0;
+//     }else{
+//         return foundNum;
+//     }
+// }
+
+// console.log(getNum(4353, 2));
+
+// const largestNum = arr => {
+//     let largest = "0";
+
+//     arr.forEach(num => {
+//         const strNum = String(num);
+
+//         if(strNum.length > largest.length){
+//             largest = strNum;
+//         }
+//     })
+//     return largest.length;
+// }    
+
+// const radixSort = arr => {
+//     let maxLength = largestNum(arr);
+
+//     for(let i=0; i < maxLength; i++) {
+//         let buckets = Array.from({length:10}, ()=>[]);
+//         for(let j=0; j < arr.length; j++){
+//             let num = getNum(arr[j], i);
+
+//             if(num !== undefined){
+//                 buckets[num].push(arr[j]);
+//             }
+//         }
+//         arr = buckets.flat();
+//     }
+//     return arr;
+// }
+
+// console.log(radixSort(unsortedArr));
+
+
+
